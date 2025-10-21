@@ -6,6 +6,8 @@ interface WelcomeProps {
   onStart: () => void;
 }
 
+
+//welcome card
 const Welcome = ({ onStart }: WelcomeProps) => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
