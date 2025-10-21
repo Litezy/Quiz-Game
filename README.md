@@ -1,4 +1,4 @@
-# Quiz Master 🎯
+# Web3-bridge Quiz Master 🎯
 
 A dynamic, interactive quiz game built with React, TypeScript, and Tailwind CSS. Test your knowledge across various topics including Geography, Science, History, Mathematics, Technology, Literature, and more!
 

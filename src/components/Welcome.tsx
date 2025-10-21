@@ -18,8 +18,8 @@ const Welcome = ({ onStart }: WelcomeProps) => {
           </div>
         </div>
         
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-          Quiz Master
+        <h1 className="text-4xl  font-bold text-foreground">
+          Web3-bridge Quiz Master
         </h1>
         
         <p className="text-xl text-muted-foreground max-w-lg mx-auto">
