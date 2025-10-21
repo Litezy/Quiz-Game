@@ -18,7 +18,7 @@ const Welcome = ({ onStart }: WelcomeProps) => {
           </div>
         </div>
         
-        <h1 className="text-4xl  font-bold text-foreground">
+        <h1 className="text-2xl  font-bold text-foreground">
           Web3-bridge Quiz Master
         </h1>
         
@@ -27,7 +27,7 @@ const Welcome = ({ onStart }: WelcomeProps) => {
         </p>
         
         <div className="space-y-4 pt-4">
-          <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary" />
               <span>10 Questions</span>
