@@ -1,73 +1,140 @@
-# React + TypeScript + Vite
+# Quiz Master 🎯
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic, interactive quiz game built with React, TypeScript, and Tailwind CSS. Test your knowledge across various topics including Geography, Science, History, Mathematics, Technology, Literature, and more!
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Question Display**: One question at a time with smooth transitions
+- **Multiple Choice Answers**: 4 options per question with instant feedback
+- **Score Tracking**: Real-time score updates and progress indicator
+- **Visual Feedback**: Color-coded correct/incorrect answers
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Beautiful UI**: Bold, vibrant colors with smooth animations
+- **Share Results**: Share your score with friends
 
-## React Compiler
+## How to Play 🎮
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Click **"Start Quiz"** on the welcome screen
+2. Read each question carefully
+3. Select your answer from the four options (A, B, C, D)
+4. Get instant feedback on your choice
+5. The next question appears automatically after a short delay
+6. View your final score and percentage at the end
+7. Click **"Play Again"** to restart the quiz
 
-## Expanding the ESLint configuration
+## Technologies Used 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **Lucide React** - Icons
+- **Sonner** - Toast notifications
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation & Setup 💻
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Clone the repository
+git clone <repository-url>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Navigate to project directory
+cd quiz-master
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be available at `http://localhost:8080`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure 📁
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Welcome.tsx          # Welcome/start screen
+│   ├── Quiz.tsx             # Main quiz game logic
+│   ├── QuestionCard.tsx     # Individual question display
+│   ├── ProgressBar.tsx      # Progress and score indicator
+│   └── Results.tsx          # Final results screen
+├── data/
+│   └── questions.ts         # Question bank
+├── pages/
+│   └── Index.tsx            # Main page with game state
+└── ...
+```
+
+## Customization 🎨
+
+### Adding New Questions
+
+Edit `src/data/questions.ts` to add new questions:
+
+```typescript
+{
+  id: 11,
+  question: "Your question here?",
+  options: ["Option A", "Option B", "Option C", "Option D"],
+  correctAnswer: 0, // Index of correct answer (0-3)
+  category: "Category Name"
+}
+```
+
+### Changing Colors
+
+The design system is defined in `src/index.css`. Modify CSS variables to change the color scheme:
+
+```css
+:root {
+  --primary: 245 60% 55%;      /* Main theme color */
+  --success: 145 65% 45%;      /* Correct answers */
+  --destructive: 355 75% 55%;  /* Incorrect answers */
+  /* ... more colors */
+}
+```
+
+## Future Enhancements 🚀
+
+Potential features to add:
+- Timer for each question
+- Multiple quiz categories/difficulty levels
+- Leaderboard with high scores
+- User accounts and progress tracking
+- API integration for dynamic questions
+- Sound effects and music
+- Multiplayer mode
+- Question explanations
+
+## Error Handling 🛡️
+
+The application includes:
+- TypeScript type safety to prevent runtime errors
+- Graceful handling of invalid data
+- Responsive error states
+- Toast notifications for user feedback
+
+## Contributing 🤝
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License 📄
+
+This project is open source and available under the MIT License.
+
+## Acknowledgments 🙏
+
+- UI components from [shadcn/ui](https://ui.shadcn.com)
+- Icons from [Lucide](https://lucide.dev)
+
+---
+
+Made with ❤️ using React and TypeScript from Belziee
