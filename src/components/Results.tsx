@@ -81,7 +81,7 @@ const Results = ({ score, totalQuestions, onRestart }: ResultsProps) => {
           <Button 
             onClick={onRestart} 
             size="lg"
-            className="flex-1 hover:scale-105 transition-transform"
+            className="flex-1 p-2 hover:scale-105 transition-transform"
           >
             <RotateCcw className="w-5 h-5 mr-2" />
             Play Again
@@ -92,7 +92,7 @@ const Results = ({ score, totalQuestions, onRestart }: ResultsProps) => {
             onClick={handleShare}
             variant="outline"
             size="lg"
-            className="flex-1 hover:scale-105 transition-transform"
+            className="flex-1 p-2 hover:scale-105 transition-transform"
           >
             <Share2 className="w-5 h-5 mr-2" />
             Share Score
