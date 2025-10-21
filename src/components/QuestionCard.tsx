@@ -11,6 +11,7 @@ interface QuestionCardProps {
   onAnswerSelect: (answerIndex: number) => void;
 }
 
+
 const QuestionCard = ({ 
   question, 
   selectedAnswer, 
@@ -50,7 +51,7 @@ const QuestionCard = ({
             className={cn(
               "h-auto py-4 px-6 text-left justify-start text-base md:text-lg transition-all",
               getButtonClass(index),
-              !showFeedback && "hover:scale-[1.02]"
+              !showFeedback && ""
             )}
             onClick={() => onAnswerSelect(index)}
             disabled={showFeedback}

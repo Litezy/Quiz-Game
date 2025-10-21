@@ -36,10 +36,10 @@ A dynamic, interactive quiz game built with React, TypeScript, and Tailwind CSS.
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/Litezy/Quiz-Game.git)
 
 # Navigate to project directory
-cd quiz-master
+cd Quiz-Game
 
 # Install dependencies
 npm install
@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:8080`
+The app will be available at `http://localhost:5173`
 
 ## Project Structure 📁
 
@@ -83,18 +83,7 @@ Edit `src/data/questions.ts` to add new questions:
 }
 ```
 
-### Changing Colors
 
-The design system is defined in `src/index.css`. Modify CSS variables to change the color scheme:
-
-```css
-:root {
-  --primary: 245 60% 55%;      /* Main theme color */
-  --success: 145 65% 45%;      /* Correct answers */
-  --destructive: 355 75% 55%;  /* Incorrect answers */
-  /* ... more colors */
-}
-```
 
 ## Future Enhancements 🚀
 
@@ -116,19 +105,7 @@ The application includes:
 - Responsive error states
 - Toast notifications for user feedback
 
-## Contributing 🤝
 
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License 📄
-
-This project is open source and available under the MIT License.
 
 ## Acknowledgments 🙏
 
